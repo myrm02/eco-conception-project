@@ -15,9 +15,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  experimental: {
-    instrumentationHook: true,
-  },
+  serverExternalPackages: ['@pyroscope/nodejs']
 };
 
 export default nextConfig;
