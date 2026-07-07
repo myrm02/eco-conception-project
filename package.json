@@ -8,6 +8,7 @@
   "dependencies": {
     "@prisma/client": "^6.2.1",
     "@pyroscope/nodejs": "^0.4.12",
+    "cloudinary": "^2.10.0",
     "next-video": "^2.0.1"
   }
 }
