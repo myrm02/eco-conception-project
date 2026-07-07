@@ -15,6 +15,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  serverExternalPackages: ['@pyroscope/nodejs']
 };
 
 export default nextConfig;
