@@ -73,14 +73,14 @@ export default function Home() {
 </div>
       <div className="relative w-full flex flex-col items-center justify-center mb-12 overflow-hidden">
         <div className="relative z-30 p-5 text-5xl text-black font-dm-sans max-w-[840px]">
-          Une agence web, d'édition logiciels {currentWord}
+          {"Une agence web, d'édition logiciels"} {currentWord}
         </div>
         <div className="relative z-30 p-5 text-black max-w-[1000px] font-raleway">
-        L20 (on verra le nom après ) est une agence spécialisée dans le développement web, l'édition de logiciels et la création de contenus créatifs pour l'industrie cinématographique. Grâce à notre expertise et notre expérience, nous vous accompagnons dans la réalisation de sites web innovants, de logiciels sur mesure, et de projets créatifs variés.
-
-Nous offrons également des services de développement de plateformes e-learning, de gestion de contenu, et de solutions interactives pour enrichir vos projets cinématographiques. Notre équipe est dédiée à fournir des solutions de haute qualité qui répondent aux besoins spécifiques de chaque client.
-
-Depuis plusieurs années, nous collaborons avec des entreprises de renom dans le secteur du cinéma, et nous sommes fiers de contribuer à leur succès et à leur croissance.
+        {"L20 (on verra le nom après ) est une agence spécialisée dans le développement web, l'édition de logiciels et la création de contenus créatifs pour l'industrie cinématographique. Grâce à notre expertise et notre expérience, nous vous accompagnons dans la réalisation de sites web innovants, de logiciels sur mesure, et de projets créatifs variés."}
+        {""}
+        {"Nous offrons également des services de développement de plateformes e-learning, de gestion de contenu, et de solutions interactives pour enrichir vos projets cinématographiques. Notre équipe est dédiée à fournir des solutions de haute qualité qui répondent aux besoins spécifiques de chaque client."}
+        {""}
+        {"Depuis plusieurs années, nous collaborons avec des entreprises de renom dans le secteur du cinéma, et nous sommes fiers de contribuer à leur succès et à leur croissance."}
         </div>
         {/* <div>
           <LinkButton pageRoute={"/contact"}>
@@ -98,9 +98,11 @@ Depuis plusieurs années, nous collaborons avec des entreprises de renom dans le
       </div>
       <div className="relative flex flex-col mx-auto">
         <p className="text-black mx-auto text-5xl pb-3 font-dm-sans">Contenus fictifs</p>
-        <p className="text-black max-w-[1000px] font-raleway">Depuis de nombreuses années, nous offrons des services d'édition de contenus web fictifs spécialement conçus pour répondre aux besoins variés de l'industrie cinématographique. Que ce soit pour des besoins temporaires ou pour la promotion d'un film ou d'une série, nous vous accompagnons dans la création de solutions web sur mesure.
-
-Nous développons des applications personnalisées et des sites web innovants qui répondent aux exigences uniques de chaque projet cinématographique. Notre expertise nous permet de vous offrir des plateformes interactives et des outils de gestion de contenu qui enrichissent vos productions.</p>
+        <p className="text-black max-w-[1000px] font-raleway">
+          {"Depuis de nombreuses années, nous offrons des services d'édition de contenus web fictifs spécialement conçus pour répondre aux besoins variés de l'industrie cinématographique. Que ce soit pour des besoins temporaires ou pour la promotion d'un film ou d'une série, nous vous accompagnons dans la création de solutions web sur mesure."}
+          {""}
+          {"Nous développons des applications personnalisées et des sites web innovants qui répondent aux exigences uniques de chaque projet cinématographique. Notre expertise nous permet de vous offrir des plateformes interactives et des outils de gestion de contenu qui enrichissent vos productions."}
+        </p>
       {/* <div>
           <LinkButton pageRoute={"/contact"}>
             <button>Contactez-nous</button>
@@ -110,14 +112,14 @@ Nous développons des applications personnalisées et des sites web innovants qu
 
 <div className="relative w-full flex flex-col items-center justify-center my-12 overflow-hidden">
         <div className="relative z-30 p-5 text-5xl text-black font-dm-sans">
-        Et si votre projet passez à l'IA générative ?
+        {"Et si votre projet passez à l'IA générative ?"}
         </div>
         <div className="relative z-30 p-5 max-w-[1000px] text-black font-raleway">
-        Vous avez un projet de film cinématographique nécessitant des assets graphiques 3D ou 2D automatisés ? C’est maintenant possible grâce à notre service d'IA générative ! Nous créons des assets graphiques de haute qualité pour vos productions cinématographiques, qu'il s'agisse de films, de séries ou de publicités.
+        {"Vous avez un projet de film cinématographique nécessitant des assets graphiques 3D ou 2D automatisés ? C’est maintenant possible grâce à notre service d'IA générative ! Nous créons des assets graphiques de haute qualité pour vos productions cinématographiques, qu'il s'agisse de films, de séries ou de publicités."}
 
-Grâce à notre technologie avancée et à notre expertise en intelligence artificielle, nous générons des éléments visuels qui s'intègrent parfaitement à vos projets. Nous nous occupons de tout, de la conception à la réalisation, pour vous offrir des solutions graphiques innovantes et automatisées.
+{"Grâce à notre technologie avancée et à notre expertise en intelligence artificielle, nous générons des éléments visuels qui s'intègrent parfaitement à vos projets. Nous nous occupons de tout, de la conception à la réalisation, pour vous offrir des solutions graphiques innovantes et automatisées."}
 
-Passez le cap de la production cinématographique avec nos services d'IA générative et donnez vie à vos idées avec des assets graphiques de qualité professionnelle.
+{"Passez le cap de la production cinématographique avec nos services d'IA générative et donnez vie à vos idées avec des assets graphiques de qualité professionnelle."}
         </div>
         {/* <div>
           <LinkButton pageRoute={"/contact"}>
@@ -448,7 +450,7 @@ style={{fill:"#FFFFFF"}}>
             <a href="https://www.youtube.com/@A24">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0,0,256,256"
 style={{fill:"#FFFFFF"}}>
-<g fill="#ffffff" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" style={{mixBlendMode: "normal"}}><g transform="scale(10.66667,10.66667)"><path d="M21.582,6.186c-0.23,-0.86 -0.908,-1.538 -1.768,-1.768c-1.56,-0.418 -7.814,-0.418 -7.814,-0.418c0,0 -6.254,0 -7.814,0.418c-0.86,0.23 -1.538,0.908 -1.768,1.768c-0.418,1.56 -0.418,5.814 -0.418,5.814c0,0 0,4.254 0.418,5.814c0.23,0.86 0.908,1.538 1.768,1.768c1.56,0.418 7.814,0.418 7.814,0.418c0,0 6.254,0 7.814,-0.418c0.861,-0.23 1.538,-0.908 1.768,-1.768c0.418,-1.56 0.418,-5.814 0.418,-5.814c0,0 0,-4.254 -0.418,-5.814zM10,14.598v-5.196c0,-0.385 0.417,-0.625 0.75,-0.433l4.5,2.598c0.333,0.192 0.333,0.674 0,0.866l-4.5,2.598c-0.333,0.193 -0.75,-0.048 -0.75,-0.433z"></path></g></g>
+<g fill="#ffffff" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" style={{mixBlendMode: "normal"}}><g transform="scale(10.66667,10.66667)"><path d="M21.582,6.186c-0.23,-0.86 -0.908,-1.538 -1.768,-1.768c-1.56,-0.418 -7.814,-0.418 -7.814,-0.418c0,0 -6.254,0 -7.814,0.418c-0.86,0.23 -1.538,0.908 -1.768,1.768c-0.418,1.56 -0.418,5.814 -0.418,5.814c0,0 0,4.254 0.418,5.814c0.23,0.86 0.908,1.538 1.768,1.768c1.56,0.418 7.814,0.418 7.814,0.418c0,0 6.254,0 7.814,-0.418c0.861,-0.23 1.538,-0.908 1.768,-1.768c0.418,-1.56 0.418,-5.814 0.418,-5.814c0,0 0,-4.254 -0.418,-5.814zM10,14.598v-5.196c0,-0.385 0.417,-0.625 0.75,-0.433l4.5,2.598c0.333,0.192 0.333,0.674 0,0.866l-4.5,2.598c-0.333,0.193 -0.75,-0.048 -0.75,-0.433z"></path></g></g>
 </svg>
             </a>
           </div>
