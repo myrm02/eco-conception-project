@@ -5,7 +5,7 @@ import LogoCarousel from "../../Carousel";
 import NewsCarousel from "../../Newsletter Carousel";
 // import { CldImage } from 'next-cloudinary';
 // import Rating from "../../Rating";
-// import LinkButton from "../../LinkButton";
+import LinkButton from "../../LinkButton";
 
 export default function Home() {
   // const [rating, setRating] = useState(3);
@@ -82,11 +82,11 @@ export default function Home() {
         {""}
         {"Depuis plusieurs années, nous collaborons avec des entreprises de renom dans le secteur du cinéma, et nous sommes fiers de contribuer à leur succès et à leur croissance."}
         </div>
-        {/* <div>
-          <LinkButton pageRoute={"/contact"}>
-            <button>Contactez-nous</button>
+        <div className="justify-center">
+          <LinkButton classname="justify-center items-center" pageRoute={"/contact"}>
+            <button className="bg-black text-white rounded-full p-3">Contactez-nous</button>
           </LinkButton>
-        </div> */}
+        </div>
         <Image
             aria-hidden
             src="/office.jpg"
@@ -103,11 +103,11 @@ export default function Home() {
           {""}
           {"Nous développons des applications personnalisées et des sites web innovants qui répondent aux exigences uniques de chaque projet cinématographique. Notre expertise nous permet de vous offrir des plateformes interactives et des outils de gestion de contenu qui enrichissent vos productions."}
         </p>
-      {/* <div>
-          <LinkButton pageRoute={"/contact"}>
-            <button>Contactez-nous</button>
+      <div className="justify-center">
+          <LinkButton classname="justify-center items-center" pageRoute={"/contact"}>
+            <button className="bg-black text-white rounded-full p-3">Contactez-nous</button>
           </LinkButton>
-        </div> */}
+        </div>
       </div>
 
 <div className="relative w-full flex flex-col items-center justify-center my-12 overflow-hidden">
@@ -121,11 +121,11 @@ export default function Home() {
 
 {"Passez le cap de la production cinématographique avec nos services d'IA générative et donnez vie à vos idées avec des assets graphiques de qualité professionnelle."}
         </div>
-        {/* <div>
-          <LinkButton pageRoute={"/contact"}>
-            <button>Contactez-nous</button>
+        <div className="justify-center">
+          <LinkButton classname="justify-center items-center" pageRoute={"/contact"}>
+            <button className="bg-black text-white rounded-full p-3">Contactez-nous</button>
           </LinkButton>
-        </div> */}
+        </div>
         <Image
             aria-hidden
             src="/office.jpg"
@@ -176,7 +176,9 @@ style={{fill:"#737373"}}>
     </button>
 <div className="relative flex flex-col mx-auto my-12">
         <p className="text-black mx-auto font-[Roboto] pb-3">L24</p>
-        <p className="text-black mx-auto text-2xl pb-7 font-dm-sans">Exemples de réalisation de site internet</p>
+        <LinkButton classname="text-black text-2xl pb-7 font-dm-sans" pageRoute="/projet">
+          Exemples de réalisation de site internet
+        </LinkButton>
         <div className="relative grid grid-cols-4 gap-4 mx-auto text-black">
         <div className="flex flex-col">
           <Image
@@ -222,7 +224,9 @@ style={{fill:"#737373"}}>
       </div>
       <div className="relative flex flex-col mx-auto mbmy-12">
         <p className="text-black mx-auto font-[Roboto] pb-3">L24</p>
-        <p className="text-black text-2xl pb-7 font-dm-sans">Exemples de réalisation de logiciels ou contenus fictifs</p>
+          <LinkButton classname="text-black text-2xl pb-7 font-dm-sans" pageRoute="/projet">
+            Exemples de réalisation de logiciels ou contenus fictifs
+          </LinkButton>
         <div className="relative grid grid-cols-4 gap-4 mx-auto text-black">
         <div className="flex flex-col">
           <Image
@@ -354,11 +358,11 @@ style={{fill:"#737373"}}>
       </div>
       </div>
       
-      {/* <div>
-          <LinkButton pageRoute={"/contact"}>
-            <button>Contactez-nous</button>
+      <div className="justify-center">
+          <LinkButton classname="justify-center items-center" pageRoute={"/contact"}>
+            <button className="bg-black text-white rounded-full p-3">Contactez-nous</button>
           </LinkButton>
-        </div> */}
+        </div>
       <div className="relative flex flex-col mx-auto mb-12">
         <p className="text-black mx-auto pb-3">L24</p>
         <p className="text-black mx-auto text-2xl pb-7 font-dm-sans">Ils nous font confiance</p>
