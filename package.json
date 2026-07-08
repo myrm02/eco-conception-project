@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "k6:calcul-complexe:cloud": "k6 cloud run --local-execution my-app/k6/calcul-complexe-cloud.js"
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.1",
