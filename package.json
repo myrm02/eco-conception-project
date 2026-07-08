@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "k6:calcul-complexe:cloud": "k6 cloud run --local-execution my-app/k6/calcul-complexe-cloud.js"
+    "k6:calcul-complexe:optimized": "k6 cloud run --local-execution my-app/k6/calcul-complexe-cloud.js",
+    "k6:calcul-complexe:naive": "k6 cloud run --local-execution my-app/k6/calcul-complexe-naive.js",
+    "k6:calcul-complexe:cloud": "npm run k6:calcul-complexe:optimized"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",

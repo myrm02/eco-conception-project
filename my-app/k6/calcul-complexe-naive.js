@@ -8,8 +8,8 @@ pyroscope.instrumentHTTP();
 const serverDurationMs = new Trend('server_duration_ms');
 
 const baseUrl = 'https://l24-agency.vercel.app';
-const complexVariant = 'optimized';
-const expectedStrategy = 'precomputed-sieve';
+const complexVariant = 'naive';
+const expectedStrategy = 'naive-loop';
 const complexLimit = 50_000;
 const vus = 5;
 const duration = '1m';
