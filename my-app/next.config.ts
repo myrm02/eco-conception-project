@@ -1,10 +1,7 @@
-const ONE_YEAR_IN_SECONDS = 31_536_000;
+import type { NextConfig } from "next";
+import { ONE_YEAR_CACHE_HEADERS } from "./src/lib/cache-policy";
 
-const ONE_YEAR_CACHE_HEADERS = {
-  "Cache-Control": `public, max-age=${ONE_YEAR_IN_SECONDS}, immutable`,
-  "CDN-Cache-Control": `public, max-age=${ONE_YEAR_IN_SECONDS}`,
-  "Vercel-CDN-Cache-Control": `public, max-age=${ONE_YEAR_IN_SECONDS}`,
-};
+const ONE_YEAR_IN_SECONDS = 31_536_000;
 
 const immutablePublicAssets = [
   "/file.svg",
@@ -28,20 +25,19 @@ const oneYearCacheHeaders = Object.entries(ONE_YEAR_CACHE_HEADERS).map(
   }),
 );
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig: NextConfig = {
   images: {
     // Remote image URLs must be versioned when their content changes.
     minimumCacheTTL: ONE_YEAR_IN_SECONDS,
     remotePatterns: [
       {
-        hostname: "img.icons8.com",
+        hostname: 'img.icons8.com',
       },
       {
-        hostname: "example.com",
+        hostname: 'example.com',
       },
       {
-        hostname: "cruip-tutorials.vercel.app",
+        hostname: 'cruip-tutorials.vercel.app',
       },
       {
         protocol: "https",
@@ -53,15 +49,19 @@ const nextConfig = {
       },
     ],
   },
-  serverExternalPackages: ["@pyroscope/nodejs"],
+  serverExternalPackages: ['@pyroscope/nodejs'],
   async headers() {
     return [
-      ...["/", "/contact", "/images", "/projet", "/projet/:path*"].map(
-        (source) => ({
-          source,
-          headers: oneYearCacheHeaders,
-        }),
-      ),
+      ...[
+        "/",
+        "/contact",
+        "/images",
+        "/projet",
+        "/projet/:path*",
+      ].map((source) => ({
+        source,
+        headers: oneYearCacheHeaders,
+      })),
       ...immutablePublicAssets.map((source) => ({
         source,
         headers: oneYearCacheHeaders,
@@ -88,4 +88,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
