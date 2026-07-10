@@ -89,7 +89,7 @@ export default function Home() {
         </div>
         <Image
             aria-hidden
-            src="/office.jpg"
+            src="/office.3ec3723e.jpg"
             alt="Globe icon"
             width={0}
             height={0}
@@ -128,7 +128,7 @@ export default function Home() {
         </div>
         <Image
             aria-hidden
-            src="/office.jpg"
+            src="/office.3ec3723e.jpg"
             alt="Globe icon"
             width={0}
             height={0}
@@ -183,7 +183,7 @@ style={{fill:"#737373"}}>
         <div className="flex flex-col">
           <Image
             aria-hidden
-            src="/The-Greatest-Showman.png"
+            src="/The-Greatest-Showman.2e5c5068.png"
             alt="Globe icon"
             width={200}
             height={200}
@@ -193,7 +193,7 @@ style={{fill:"#737373"}}>
         <div className="flex flex-col">
           <Image
             aria-hidden
-            src="/The-Greatest-Showman.png"
+            src="/The-Greatest-Showman.2e5c5068.png"
             alt="Globe icon"
             width={200}
             height={200}
@@ -203,7 +203,7 @@ style={{fill:"#737373"}}>
         <div className="flex flex-col">
           <Image
             aria-hidden
-            src="/The-Greatest-Showman.png"
+            src="/The-Greatest-Showman.2e5c5068.png"
             alt="Globe icon"
             width={200}
             height={200}
@@ -213,7 +213,7 @@ style={{fill:"#737373"}}>
         <div className="flex flex-col">
           <Image
             aria-hidden
-            src="/The-Greatest-Showman.png"
+            src="/The-Greatest-Showman.2e5c5068.png"
             alt="Globe icon"
             width={200}
             height={200}
@@ -231,7 +231,7 @@ style={{fill:"#737373"}}>
         <div className="flex flex-col">
           <Image
             aria-hidden
-            src="/The-Greatest-Showman.png"
+            src="/The-Greatest-Showman.2e5c5068.png"
             alt="Globe icon"
             width={200}
             height={200}
@@ -241,7 +241,7 @@ style={{fill:"#737373"}}>
         <div className="flex flex-col">
           <Image
             aria-hidden
-            src="/The-Greatest-Showman.png"
+            src="/The-Greatest-Showman.2e5c5068.png"
             alt="Globe icon"
             width={200}
             height={200}
@@ -251,7 +251,7 @@ style={{fill:"#737373"}}>
         <div className="flex flex-col">
           <Image
             aria-hidden
-            src="/The-Greatest-Showman.png"
+            src="/The-Greatest-Showman.2e5c5068.png"
             alt="Globe icon"
             width={200}
             height={200}
@@ -261,7 +261,7 @@ style={{fill:"#737373"}}>
         <div className="flex flex-col">
           <Image
             aria-hidden
-            src="/The-Greatest-Showman.png"
+            src="/The-Greatest-Showman.2e5c5068.png"
             alt="Globe icon"
             width={200}
             height={200}
@@ -277,7 +277,7 @@ style={{fill:"#737373"}}>
         <div className="flex flex-col">
           <Image
             aria-hidden
-            src="/The-Greatest-Showman.png"
+            src="/The-Greatest-Showman.2e5c5068.png"
             alt="Globe icon"
             width={200}
             height={200}
@@ -287,7 +287,7 @@ style={{fill:"#737373"}}>
         <div className="flex flex-col">
           <Image
             aria-hidden
-            src="/The-Greatest-Showman.png"
+            src="/The-Greatest-Showman.2e5c5068.png"
             alt="Globe icon"
             width={200}
             height={200}
@@ -297,7 +297,7 @@ style={{fill:"#737373"}}>
         <div className="flex flex-col">
           <Image
             aria-hidden
-            src="/The-Greatest-Showman.png"
+            src="/The-Greatest-Showman.2e5c5068.png"
             alt="Globe icon"
             width={200}
             height={200}
@@ -307,7 +307,7 @@ style={{fill:"#737373"}}>
         <div className="flex flex-col">
           <Image
             aria-hidden
-            src="/The-Greatest-Showman.png"
+            src="/The-Greatest-Showman.2e5c5068.png"
             alt="Globe icon"
             width={200}
             height={200}
@@ -322,7 +322,7 @@ style={{fill:"#737373"}}>
         <div className="flex flex-col">
           <Image
             aria-hidden
-            src="/fiction-app.jpg"
+            src="/fiction-app.fabc46d2.jpg"
             alt="Globe icon"
             width={100}
             height={100}
@@ -334,7 +334,7 @@ style={{fill:"#737373"}}>
         <div className="flex flex-col">
           <Image
             aria-hidden
-            src="/software.jpg"
+            src="/software.9b0c52d5.jpg"
             alt="Globe icon"
             width={100}
             height={100}
@@ -346,7 +346,7 @@ style={{fill:"#737373"}}>
         <div className="flex flex-col">
           <Image
             aria-hidden
-            src="/creative-events.jpg"
+            src="/creative-events.6b550ad3.jpg"
             alt="Globe icon"
             width={100}
             height={100}

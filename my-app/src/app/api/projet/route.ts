@@ -1,32 +1,34 @@
-// my-app/src/app/api/projet/route.ts
-import { PrismaClient } from '@prisma/client';
-import { NextResponse } from 'next/server';
-
-const prisma = new PrismaClient();
+import {
+  NO_STORE_CACHE_HEADERS,
+  ONE_YEAR_CACHE_HEADERS,
+} from "@/lib/cache-policy";
+import { getProjects } from "@/lib/project-cache";
+import { isProjectTechnology } from "@/lib/project-technologies";
+import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
   const url = new URL(request.url);
-  const tech = url.searchParams.get('tech');
+  const technology = url.searchParams.get("tech")?.trim() || null;
+
+  if (technology && !isProjectTechnology(technology)) {
+    return NextResponse.json(
+      { message: "Technologie de projet invalide." },
+      { status: 400, headers: NO_STORE_CACHE_HEADERS },
+    );
+  }
 
   try {
-    const projects = await prisma.projet.findMany({
-      where: tech
-        ? {
-            technologies: {
-              contains: tech,
-            },
-          }
-        : {}, 
-      select: {
-        id: true,
-        name: true,
-        images: true,
-        description: true,
-      },
+    const projects = await getProjects(technology);
+
+    return NextResponse.json(projects, {
+      headers: ONE_YEAR_CACHE_HEADERS,
     });
-    return NextResponse.json(projects);
   } catch (error) {
-    console.error('Erreur lors de la récupération des projets :', error);
-    return NextResponse.json({ message: 'Erreur interne du serveur.' }, { status: 500 });
+    console.error("Erreur lors de la récupération des projets :", error);
+
+    return NextResponse.json(
+      { message: "Erreur interne du serveur." },
+      { status: 500, headers: NO_STORE_CACHE_HEADERS },
+    );
   }
 }
