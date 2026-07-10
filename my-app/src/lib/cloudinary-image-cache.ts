@@ -4,6 +4,11 @@ import { unstable_cache } from "next/cache";
 const ONE_YEAR_IN_SECONDS = 31_536_000;
 const CACHE_VERSION =
   process.env.CACHE_VERSION ?? process.env.VERCEL_GIT_COMMIT_SHA ?? "v1";
+const HAS_CLOUDINARY_CONFIG = Boolean(
+  process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME &&
+    process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY &&
+    process.env.NEXT_PUBLIC_CLOUDINARY_API_SECRET,
+);
 
 type CloudinaryResource = {
   public_id: string;
@@ -16,6 +21,10 @@ type CloudinarySearchResult = {
 
 export const getCloudinaryImages = unstable_cache(
   async () => {
+    if (!HAS_CLOUDINARY_CONFIG) {
+      return [];
+    }
+
     const result = (await cloudinary.search
       .expression("folder:your_folder_name")
       .sort_by("public_id", "desc")
