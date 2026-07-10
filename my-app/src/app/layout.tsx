@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { DM_Sans, Geist, Geist_Mono, Nunito_Sans, Quicksand, Barlow, Raleway } from "next/font/google";
 import "./globals.css";
 
+// Keep every cacheable page in the Next.js/ISR cache for one year.
+// The literal value is required so Next.js can analyze it at build time.
+export const revalidate = 31536000;
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

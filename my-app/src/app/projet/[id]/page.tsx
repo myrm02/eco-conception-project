@@ -1,5 +1,5 @@
 // app/projet/[id]/page.tsx
-import prisma from "@/app/Prisma";
+import { getProjectById } from "@/lib/project-cache";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
@@ -9,11 +9,18 @@ type Props = {
     }>;
 };
 
+export const dynamic = "force-static";
+export const revalidate = 31536000;
+
 export default async function ProjetDetailsPage(props: Props) {
     const params = await props.params;
-    const projet = await prisma.projet.findUnique({
-        where: { id: parseInt(params.id) },
-    });
+    const id = Number(params.id);
+
+    if (!Number.isSafeInteger(id) || id <= 0 || id > 2_147_483_647) {
+        notFound();
+    }
+
+    const projet = await getProjectById(id);
 
     if (!projet) {
         notFound();

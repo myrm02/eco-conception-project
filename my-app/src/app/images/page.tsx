@@ -1,30 +1,23 @@
-"use client"
-
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { getCloudinaryImages } from "@/lib/cloudinary-image-cache";
 
-export default function Images() {
-    const [images, setImages] = useState<{ id: string; url: string }[]>([]);
+export const revalidate = 31_536_000;
 
-    useEffect(() => {
-        const fetchImages = async () => {
-          const response = await fetch('/api/images');
-          const data = await response.json();
-          setImages(data);
-        };
-    
-        fetchImages();
-      }, []);
+export default async function ImagesPage() {
+  const images = await getCloudinaryImages();
 
-    return (
-        <>
-            <div className="grid grid-cols-3 gap-4">
-        {images.map((image) => (
-          <div key={image.id}>
-            <Image src={image.url} alt="Uploaded Image" width={500} height={300} />
-          </div>
-        ))}
-      </div>
-        </>
-    )
+  return (
+    <div className="grid grid-cols-3 gap-4">
+      {images.map((image) => (
+        <div key={image.id}>
+          <Image
+            src={image.url}
+            alt="Uploaded Image"
+            width={500}
+            height={300}
+          />
+        </div>
+      ))}
+    </div>
+  );
 }
