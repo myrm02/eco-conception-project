@@ -5,6 +5,7 @@ import {
     parseComplexVariant,
 } from '@/lib/calcul-complexe';
 import { withK6ProfileLabels } from '@/lib/pyroscope-k6';
+import { NO_STORE_CACHE_HEADERS } from '@/lib/cache-policy';
 // a
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -19,11 +20,14 @@ export async function GET(request: Request) {
         const result = getComplexCalculation(limit, variant);
         const durationMs = Number((performance.now() - startedAt).toFixed(2));
 
-        return NextResponse.json({
-            route: '/api/calcul-complexe',
-            requestedLimit: limit,
-            durationMs,
-            ...result,
-        });
+        return NextResponse.json(
+            {
+                route: '/api/calcul-complexe',
+                requestedLimit: limit,
+                durationMs,
+                ...result,
+            },
+            { headers: NO_STORE_CACHE_HEADERS },
+        );
     });
 }
