@@ -37,6 +37,9 @@ const nextConfig: NextConfig = {
         hostname: 'example.com',
       },
       {
+        hostname: 'cruip-tutorials.vercel.app',
+      },
+      {
         protocol: "https",
         hostname: "i.postimg.cc",
       },
