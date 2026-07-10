@@ -24,17 +24,20 @@ export default async function ProjectsPage(props: Props) {
   const projects = await getProjects(activeTech);
 
   return (
-    <div className="container">
-      <h1 className="page-title">NOS PROJETS</h1>
+    <div className="container justify-center" aria-label="Page de projet">
+      <h1 className="text-9xl text-blue-900">NOS PROJETS</h1>
       <div className="technologies">
         <ul className="projects-techno">
           <li className={!activeTech ? "selected" : ""}>
-            <Link href="/projet">Tous les projets</Link>
+            <Link href="/projet" aria-label="Filtre par défaut">
+              Tous les projets
+            </Link>
           </li>
           {PROJECT_TECHNOLOGIES.map((techItem) => (
             <li
               key={techItem}
               className={techItem === activeTech ? "selected" : ""}
+              aria-label={"Filtre pour la technologie " + techItem}
             >
               <Link href={`/projet?tech=${encodeURIComponent(techItem)}`}>
                 {techItem}
@@ -59,12 +62,17 @@ export default async function ProjectsPage(props: Props) {
                   className="project-image"
                   width={500}
                   height={350}
+                  priority={true}
                 />
 
                 <div className="overlay">
                   <h2 className="project-title">{project.name}</h2>
                   <p className="description">{project.description}</p>
-                  <a href={`/projet/${project.id}`} className="more-info-button">
+                  <a
+                    href={`/projet/${project.id}`}
+                    className="more-info-button"
+                    aria-label="En savoir plus sur le projet"
+                  >
                     Voir plus
                   </a>
                 </div>

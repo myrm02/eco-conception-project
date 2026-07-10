@@ -2,6 +2,7 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: [
+    "./*.{js,ts,jsx,tsx,mdx}",
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -56,6 +57,15 @@ export default {
         'raleway': ['var(--font-raleway)', 'sans-serif'],
         'quicksand': ['var(--font-quicksand)', 'sans-serif'],
         'barlow': ['var(--font-barlow)', 'sans-serif']
+      },
+      keyframes: {
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-50%)' },
+        },
+      },
+      animation: {
+        'infinite-scroll': 'infinite-scroll 28s linear infinite',
       },
     },
   },
